@@ -1,6 +1,8 @@
 import React from 'react';
-import UiKitPage from '../../pages/Ui-kit-page';
+
 import './app.scss';
+
+import UiKitPage from '../../pages/ui-kit/Ui-kit-page';
 
 const App = () => {
   return (
