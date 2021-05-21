@@ -2,7 +2,7 @@ const path = require(`path`); // Методе node.js позволяющий р�
 
 //* Подключение плагинов
 const HTMLWebpackPlugin = require(`html-webpack-plugin`);
-const {CleanWebpackPlugin} = require(`clean-webpack-plugin`);
+const { CleanWebpackPlugin } = require(`clean-webpack-plugin`);
 const CopyWebpackPlugin = require(`copy-webpack-plugin`);
 const MiniCssExtractPlugin = require(`mini-css-extract-plugin`);
 // const OptimizeCssAssetsPlugin = require(`optimize-css-assets-webpack-plugin`);
@@ -89,6 +89,7 @@ module.exports = {
     extensions: [`.js`, `.jsx`, `.json`, `.png`, `.jpg`, `.svg`], // Какие расширения нужно понимать по умолчанию, чтобы их можно было не указывать при импорте
     alias: { // Сокращения для путей
       '@components': path.resolve(__dirname, `./src/components`),
+      '@styles': path.resolve(__dirname, `./src/styles`),
       '@': path.resolve(__dirname, `./src`)
     }
   },
@@ -119,17 +120,9 @@ module.exports = {
     new CleanWebpackPlugin(),
 
     // ? Переносит файлы или папки которые не учавствуют в сборке в dist
-    new CopyWebpackPlugin({
-      patterns: [ // Пути для переноса
-
-        // ? Assets
-        {
-          from: path.resolve(__dirname, `src/assets`),
-          to: path.resolve(__dirname, `dist/assets`),
-        }
-
-      ]
-    }),
+    // new CopyWebpackPlugin({
+    //   patterns: []
+    // }),
 
     new MiniCssExtractPlugin({
       filename: `css/[name].[contenthash].css`
@@ -157,13 +150,23 @@ module.exports = {
       // ? Обработка изображений
       {
         test: /\.(png|jpg|svg|gif|jpeg)$/,
-        use: [`file-loader`]
+        use: {
+          loader: `file-loader`,
+          options: {
+            outputPath: './assets/img'
+          }
+        }
       },
 
       // ? Обработка шрифтов
       {
         test: /\.(ttf|woff|woff2|eot)$/,
-        use: [`file-loader`]
+        use: {
+          loader: `file-loader`,
+          options: {
+            outputPath: './assets/fonts'
+          }
+        }
       },
 
       // ? Обработка js с помощью babel
