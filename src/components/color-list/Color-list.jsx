@@ -2,6 +2,7 @@ import React from 'react';
 import ColorItem from './color-item/Color-item';
 
 import {COLORS_DATA} from '../../conts';
+import './color-list.scss';
 
 const ColorList = () => {
   return (

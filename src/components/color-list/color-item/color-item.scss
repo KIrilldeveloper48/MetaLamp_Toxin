@@ -1,0 +1,65 @@
+@import '@styles/color-vars';
+
+.colors {
+  &__item {
+    color: $title-color;
+    list-style: none;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-rows: auto;
+    align-items: center;
+  }
+
+  &__item :last-child {
+    margin-bottom: 0;
+  }
+
+  &__preview {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+  }
+
+  &__wrapper {
+    margin-left: 40px;
+  }
+
+  &__hsl {
+    margin: 0;
+    font-weight: normal;
+  }
+
+  &__name {
+    margin: 0;
+    margin-bottom: 4px;
+  }
+
+  &__preview.title-color {
+    background-color: $title-color;
+  }
+
+  &__preview.text-color {
+    background-color: $text-color;
+  }
+
+  &__preview.label-color {
+    background-color: $label-color;
+  }
+
+  &__preview.placeholder-color {
+    background-color: $placeholder-color;
+  }
+
+  &__preview.transparent-color {
+    background-color: $transparent-color;
+  }
+
+  &__preview.primary-color {
+    background-color: $primary-color;
+  }
+
+  &__preview.secondary-color {
+    background-color: $secondary-color;
+  }
+}
