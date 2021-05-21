@@ -1,7 +1,11 @@
 import React from 'react';
+import UiKitPage from '../../pages/Ui-kit-page';
+import './app.scss';
 
 const App = () => {
-  return <h1>Hello world</h1>;
+  return (
+    <UiKitPage />
+  );
 };
 
 export default App;
