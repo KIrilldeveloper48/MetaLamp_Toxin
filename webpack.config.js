@@ -81,7 +81,8 @@ module.exports = {
   //* Как и куда складывать
   output: {
     filename: `js/[name].[contenthash].js`, // Название итогового файла js
-    path: path.resolve(__dirname, `dist`) // Конечная папка
+    path: path.resolve(__dirname, `dist`),
+    publicPath: '/'
   },
 
   //* Сокращения путей и расширений
@@ -90,6 +91,7 @@ module.exports = {
     alias: { // Сокращения для путей
       '@components': path.resolve(__dirname, `./src/components`),
       '@styles': path.resolve(__dirname, `./src/styles`),
+      '@fonts': path.resolve(__dirname, `./src/assets/fonts`),
       '@': path.resolve(__dirname, `./src`)
     }
   },
@@ -164,7 +166,7 @@ module.exports = {
         use: {
           loader: `file-loader`,
           options: {
-            outputPath: './assets/fonts'
+            outputPath: `./assets/fonts`
           }
         }
       },
