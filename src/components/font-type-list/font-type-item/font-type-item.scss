@@ -1,0 +1,37 @@
+@import '@styles/color-vars';
+
+.types {
+  &__item {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 24px max-content;
+    margin-bottom: 51px;
+  }
+
+  &__title,
+  &__preview {
+    display: inline-block;
+    margin: 0;
+  }
+
+  &__title {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-self: end;
+    font-weight: 400;
+    color: $placeholder-color;
+  }
+
+  &__preview {
+    margin-left: 36px;
+    width: 370px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  &__item:last-child {
+    .types__preview {
+      width: 315px;
+    }
+  }
+}
