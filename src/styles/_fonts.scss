@@ -1,10 +1,11 @@
+@import './color-vars';
+
 @font-face {
   font-family: 'Montserrat';
-  src: url('@/assets/fonts/montserrat-regular.eot');
-  src: url('@/assets/fonts/montserrat-regular.eot?#iefix') format('embedded-opentype'),
-    url('@/assets/fonts/montserrat-regular.woff2') format('woff2'),
-    url('@/assets/fonts/montserrat-regular.woff') format('woff'),
-    url('@/assets/fonts/montserrat-regular.ttf') format('truetype');
+  src: url('@fonts/montserrat-regular.eot');
+  src: url('@fonts/montserrat-regular.eot?#iefix') format('embedded-opentype'),
+    url('@fonts/montserrat-regular.woff2') format('woff2'), url('@fonts/montserrat-regular.woff') format('woff'),
+    url('@fonts/montserrat-regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
@@ -13,13 +14,50 @@
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('@/assets/fonts/montserrat-bold.eot');
-  src: url('@/assets/fonts/montserrat-bold.eot?#iefix') format('embedded-opentype'),
-    url('@/assets/fonts/montserrat-bold.woff2') format('woff2'),
-    url('@/assets/fonts/montserrat-bold.woff') format('woff'),
-    url('@/assets/fonts/montserrat-bold.ttf') format('truetype');
+  src: url('@fonts/montserrat-bold.eot');
+  src: url('@fonts/montserrat-bold.eot?#iefix') format('embedded-opentype'),
+    url('@fonts/montserrat-bold.woff2') format('woff2'), url('@fonts/montserrat-bold.woff') format('woff'),
+    url('@fonts/montserrat-bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-stretch: normal;
   unicode-range: U+0020-2044;
+}
+
+%font-title {
+  font-weight: bold;
+  text-align: left;
+  color: $title-color;
+}
+
+%font-common {
+  font-weight: normal;
+  text-align: left;
+  color: $text-color;
+  line-height: 24px;
+}
+
+.primary-title {
+  @extend %font-title;
+  font-size: 24px;
+  line-height: 29.26px;
+}
+
+.secondary-title {
+  @extend %font-title;
+  font-size: 19px;
+  line-height: 25px;
+}
+
+.cta-title {
+  @extend %font-title;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.common-font {
+  @extend %font-common;
+  font-size: 14px;
+  color: $text-color;
 }
