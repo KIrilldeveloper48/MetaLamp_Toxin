@@ -1,0 +1,11 @@
+.colors-and-types {
+  padding: 30px;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-rows: max-content 1fr;
+    justify-content: space-between;
+    padding: 63px 120px;
+  }
+}
