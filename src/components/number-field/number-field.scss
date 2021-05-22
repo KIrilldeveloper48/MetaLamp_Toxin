@@ -1,0 +1,14 @@
+@import '@styles/color-vars';
+@import '@styles/input-fields';
+
+.number-field {
+  &__input {
+    @extend %input;
+    appearance: none;
+    -moz-appearance: textfield;
+  }
+
+  &__label {
+    @extend %label;
+  }
+}
