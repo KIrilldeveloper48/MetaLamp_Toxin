@@ -1,29 +1,13 @@
 @import '@styles/color-vars';
+@import '@styles/input-fields';
 
 .text-field {
-  margin-bottom: 20px;
   &__input {
-    width: 100%;
-    padding: 9px 0 9px 15px;
-    border: 1px solid $placeholder-color;
-    border-radius: 4px;
-
-    &::placeholder {
-      color: $placeholder-color;
-      opacity: 1;
-    }
-
-    &:hover,
-    &:focus {
-      border-color: $label-color;
-      outline: none;
-    }
+    @extend %input;
   }
 
   &__label {
-    display: inline-block;
-    margin-bottom: 5px;
-    line-height: 1;
+    @extend %label;
   }
 
   &__style {
