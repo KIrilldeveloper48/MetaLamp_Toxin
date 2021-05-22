@@ -1,5 +1,6 @@
 .colors-and-types {
   padding: 30px;
+  padding-bottom: 145px;
 
   &__wrapper {
     display: grid;
@@ -16,5 +17,34 @@
   &__column-1 {
     width: 320px;
     display: grid;
+    grid-row-gap: 20px;
+  }
+
+  &__group-1 {
+    display: grid;
+    grid-row-gap: 20px;
+  }
+
+  &__group-2 {
+    margin-top: 20px;
+    display: grid;
+    grid-row-gap: 40px;
+  }
+
+  &__group-3 {
+    width: 266px;
+    margin-top: 60px;
+    display: grid;
+    grid-row-gap: 20px;
+  }
+
+  &__date-dropdown {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+  }
+
+  &__filter-date {
+    width: 266px;
   }
 }
