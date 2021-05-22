@@ -9,3 +9,12 @@
     padding: 63px 120px;
   }
 }
+
+.form-elements {
+  padding: 143px 141px;
+
+  &__column-1 {
+    width: 320px;
+    display: grid;
+  }
+}
