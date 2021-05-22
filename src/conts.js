@@ -30,3 +30,11 @@ export const FONT_TYPES_DATA = [
     id: `common-font`
   }
 ];
+
+export const DROPDOWN_ROOM_FILTERS = [`Спальни`, `Кровати`, `Ванные комнаты`];
+export const DROPDOWN_GUEST = [`Взрослые`, `Дети`, `Младенцы`];
+
+export const DropdownsList = {
+  "DROPDOWN_ROOM_FILTERS": DROPDOWN_ROOM_FILTERS,
+  "DROPDOWN_GUEST": DROPDOWN_GUEST
+};
