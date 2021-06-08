@@ -1,0 +1,43 @@
+@import "@styles/color-vars";
+
+.dropdown-item {
+  position: relative;
+  list-style: none;
+  color: $title-color;
+
+  &__text {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin: 0;
+    transform: translateY(-50%);
+  }
+
+  &__calc {
+    float: right;
+  }
+
+  &__count {
+    display: inline-block;
+    width: 32px;
+    text-align: center;
+  }
+
+  &__dec,
+  &__inc {
+    display: inline-block;
+    border: 1px solid $label-color;
+    border-radius: 22px;
+    width: 30px;
+    height: 30px;
+    color: $label-color;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  &__dec--disabled,
+  &__inc--disabled {
+    border-color: $placeholder-color;
+    color: $placeholder-color;
+  }
+}

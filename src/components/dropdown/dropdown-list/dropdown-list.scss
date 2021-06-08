@@ -1,3 +1,18 @@
-.dropdown-list {
+@import "@styles/color-vars";
+
+.dropdown__list {
   position: absolute;
+  z-index: 2;
+  display: grid;
+  grid-row-gap: 7px;
+  margin-top: 0;
+  border: 1px solid $label-color;
+  border-top: none;
+  border-radius: 4px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding: 7px 7px 7px 15px;
+  width: 100%;
+  background: #fff;
+  cursor: auto;
 }
