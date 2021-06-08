@@ -10,6 +10,7 @@ import UiKitLogo from '../../assets/img/logo/logo-transparent';
 import './ui-kit.scss';
 import NumberField from '../../components/number-field/Number-field';
 import SubscriptionForm from '../../components/subscription-form/Subscription-form';
+import Checkbox from '../../components/App/checkbox/checkbox';
 
 const UiKitPage = () => {
   return (
@@ -63,7 +64,9 @@ const UiKitPage = () => {
           </div>
 
           <div className="form-elements__group-3">
-            <Dropdown placeholder="2 спальни, 2 кровати..." label="dropdown" styleType="Default" mod="ui-kit-default"/>
+            <Dropdown placeholder="2 спальни, 2 кровати..." label="dropdown" styleType="Default" mod="ui-kit-default" />
+            <Dropdown placeholder="2 спальни, 2 кровати..." label="dropdown" styleType="Expanded" mod="ui-kit-expanded" />
+            <Checkbox />
           </div>
 
         </div>
