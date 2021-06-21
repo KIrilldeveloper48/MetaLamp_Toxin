@@ -1,0 +1,24 @@
+@import "@/styles/color-vars";
+
+.arrow-btn {
+  border: none;
+  padding: 0;
+  width: 12px;
+  height: 8px;
+  background-color: transparent;
+  cursor: pointer;
+
+  &__svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    fill: $label-color;
+  }
+
+  &--expanded {
+    .arrow-btn__svg {
+      fill: $text-color;
+    }
+  }
+}

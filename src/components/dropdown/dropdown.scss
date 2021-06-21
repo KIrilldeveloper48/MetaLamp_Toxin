@@ -3,6 +3,9 @@
 
 .dropdown {
   &__label {
+    margin: 0;
+    margin-bottom: 5px;
+
     @extend %label;
   }
 
@@ -20,15 +23,7 @@
     position: absolute;
     right: 16px;
     top: 50%;
-    border: none;
-    width: 12px;
-    height: 8px;
-    background-image: url("@/assets/img/icons/expand_more.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: transparent;
     transform: translateY(-50%);
-    cursor: pointer;
   }
 
   &__select {

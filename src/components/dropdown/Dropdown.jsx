@@ -4,31 +4,44 @@ import {PropTypes} from 'prop-types';
 import './dropdown.scss';
 
 import DropdownList from './dropdown-list/Dropdown-list';
-import {DropdownsList} from '../../conts';
+import ArrowBtn from '../elements/arrow-btn/Arrow-btn';
 
-const Dropdown = ({label, placeholder, mod = ``, styleType = ``}) => {
-  const [dropdownStatus, setDropdownStatus] = useState(false);
-  const classMod = mod && `dropdown--${mod}`;
-  const expanded = dropdownStatus ? `dropdown__expanded` : ``;
-  const isUiKit = styleType && <span className="dropdown__style cta-title">{styleType}</span>;
+const Dropdown = ({currentList, label, placeholder, mod = ``, styleType = ``}) => {
+  const isExpended = styleType === `Expanded`;
+  const [expandedStatus, setExpandedStatus] = useState(isExpended);
+
+  const expandedClass = expandedStatus ? `dropdown__expanded` : ``;
 
   const dropdownClickHandler = (evt) => {
     evt.preventDefault();
-    setDropdownStatus((prev) => !prev);
+    setExpandedStatus((prev) => !prev);
   };
 
+  // !Only for UIKIT
+  const classMod = mod && `dropdown--${mod}`;
+  const isUiKit = styleType && <span className="dropdown__style cta-title">{styleType}</span>;
+  // !
+
   return (
-    <div className={`dropdown ${classMod} ${expanded}`}>
+    <div className={`dropdown ${classMod} ${expandedClass}`}>
       {isUiKit}
-      <span className="dropdown__label cta-title">{label}</span>
+
+      <h3 className="dropdown__label cta-title">
+        {label}
+      </h3>
+
       <div className="dropdown__select-wrapper">
-        <button className="dropdown__btn" onClick={dropdownClickHandler}></button>
+
+        <ArrowBtn extraClass="dropdown__btn" callback={dropdownClickHandler} isExpended={expandedStatus}/>
+
         <select className="dropdown__select common-font" defaultValue={placeholder} disabled>
-          <option className="vs-hidden" value={placeholder}>{placeholder}</option>
+          <option className="vs-hidden" value={placeholder}>
+            {placeholder}
+          </option>
         </select>
 
         {
-          dropdownStatus || styleType === `Expanded` ? <DropdownList currentList={DropdownsList.DROPDOWN_ROOM_FILTERS} /> : ``
+          expandedStatus ? <DropdownList currentList={currentList} /> : ``
         }
       </div>
     </div>
@@ -38,6 +51,7 @@ const Dropdown = ({label, placeholder, mod = ``, styleType = ``}) => {
 Dropdown.propTypes = {
   label: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
+  currentList: PropTypes.arrayOf(PropTypes.string).isRequired,
   mod: PropTypes.string,
   styleType: PropTypes.string,
 
