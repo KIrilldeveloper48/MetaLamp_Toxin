@@ -4,14 +4,16 @@ import ColorList from '@components/color-list/Color-list';
 import FontTypeList from '@components/font-type-list/Font-type-list';
 import TextField from '@components/text-field/Text-field';
 import Dropdown from '@/components/dropdown/Dropdown';
+import NumberField from '@/components/number-field/Number-field';
+import SubscriptionForm from '@/components/subscription-form/Subscription-form';
+import Checkbox from '@/components/checkbox/Checkbox';
+import Features from '@/components/features/Features';
 
 import UiKitLogo from '../../assets/img/logo/logo-transparent';
 
 import './ui-kit.scss';
-import NumberField from '../../components/number-field/Number-field';
-import SubscriptionForm from '../../components/subscription-form/Subscription-form';
-import Checkbox from '../../components/checkbox/Checkbox';
-import {CheckboxList, DropdownsList} from './../../conts';
+
+import {DropdownsList} from './../../conts';
 
 const UiKitPage = () => {
 
@@ -72,7 +74,6 @@ const UiKitPage = () => {
             <div className="form-elements__filter-date">
               <SubscriptionForm label="Subscription text field"/>
             </div>
-
           </div>
 
           <div className="form-elements__group-3">
@@ -83,6 +84,10 @@ const UiKitPage = () => {
           <div className="form-elements__group-4">
             <Checkbox currentList={CheckboxListForUiKit.features} isExpended={false}/>
             <Checkbox currentList={CheckboxListForUiKit.features} isExpended={true}/>
+          </div>
+
+          <div className="form-elements__group-5">
+            <Features />
           </div>
 
         </div>
