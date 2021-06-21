@@ -1,0 +1,48 @@
+@import "@styles/color-vars";
+
+.checkbox {
+  &__item {
+    list-style: none;
+    margin-top: 12px;
+
+    label {
+      font-size: 14px;
+      color: $label-color;
+    }
+
+    input + label {
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    input + label::before {
+      content: "";
+      display: inline-block;
+      flex-grow: 0;
+      flex-shrink: 0;
+      margin-right: 10px;
+      border: 1.5px solid $placeholder-color;
+      border-radius: 4px;
+      width: 18px;
+      height: 18px;
+    }
+
+    input + label:hover::before {
+      border-color: $primary-color;
+    }
+
+    input:checked + label::before {
+      border-color: $primary-color;
+      background-image: url("@/assets/img/icons/checked.svg");
+      background-position: center 3px;
+      background-size: 10px;
+      background-repeat: no-repeat;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.checkbox {
+  &__list-title {
+    position: relative;
+    margin: 0;
+  }
+
+  &__btn {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &--expanded {
+    .checkbox__btn {
+      transform: rotate(180deg) translateY(50%);
+    }
+  }
+}
