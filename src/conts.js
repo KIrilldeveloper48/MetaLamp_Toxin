@@ -1,3 +1,29 @@
+const DROPDOWN_ROOM_FILTERS = [`Спальни`, `Кровати`, `Ванные комнаты`];
+const DROPDOWN_GUEST = [`Взрослые`, `Дети`, `Младенцы`];
+
+const CHECKBOX_A11Y = [
+  {title: `Широкий коридор`, descr: `Ширина коридоров в номере не менее 91 см.`, checked: false},
+  {title: `Помощник для инвалидов`, descr: `На 1 этаже вас встретит специалист  и проводит до номера.`, checked: false}
+];
+
+const CHECKBOX_FEATURES = [
+  {title: `Завтрак`, descr: ``, checked: false},
+  {title: `Письменный стол`, descr: ``, checked: false},
+  {title: `Стул для кормления`, descr: ``, checked: false},
+  {title: `Кроватка`, descr: ``, checked: false},
+  {title: `Телевизор`, descr: ``, checked: false},
+  {title: `Шампунь`, descr: ``, checked: false},
+];
+
+const CHECKBOX_RULES = [
+  {title: `Можно курить`, descr: ``, checked: false},
+  {title: `Можно с питомцами`, descr: ``, checked: false},
+  {title: `Можно пригласить гостей (до 10 человек)`, descr: ``, checked: false},
+  {title: `Кроватка`, descr: ``, checked: false},
+  {title: `Телевизор`, descr: ``, checked: false},
+  {title: `Шампунь`, descr: ``, checked: false},
+];
+
 export const COLORS_DATA = [
   {colorName: `Dark Shade 100%`, colorCode: `#1F2041`, id: `title-color`},
   {colorName: `Dark Shade 75%`, colorCode: `#1F2041`, id: `text-color`},
@@ -31,10 +57,13 @@ export const FONT_TYPES_DATA = [
   }
 ];
 
-export const DROPDOWN_ROOM_FILTERS = [`Спальни`, `Кровати`, `Ванные комнаты`];
-export const DROPDOWN_GUEST = [`Взрослые`, `Дети`, `Младенцы`];
-
 export const DropdownsList = {
   "DROPDOWN_ROOM_FILTERS": DROPDOWN_ROOM_FILTERS,
   "DROPDOWN_GUEST": DROPDOWN_GUEST
+};
+
+export const CheckboxList = {
+  "CHECKBOX_FEATURES": CHECKBOX_FEATURES,
+  "CHECKBOX_A11Y": CHECKBOX_A11Y,
+  "CHECKBOX_RULES": CHECKBOX_RULES
 };
