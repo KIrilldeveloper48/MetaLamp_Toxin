@@ -1,0 +1,34 @@
+@import "@styles/color-vars";
+
+.features {
+  &__item {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: 1fr;
+    list-style: none;
+    border-bottom: 1px solid $hr-color;
+    padding-bottom: 24px;
+    width: 280px;
+  }
+
+  &__item:not(:first-child) {
+    margin-top: 20px;
+  }
+
+  &__img {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    padding: 4px;
+  }
+
+  &__title {
+    font-weight: 700;
+  }
+
+  &__title,
+  &__descr {
+    grid-column: 2/3;
+    margin: 0;
+    margin-left: 10px;
+  }
+}
