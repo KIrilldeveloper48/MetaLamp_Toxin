@@ -4,6 +4,7 @@
 .number-field {
   &__input {
     @extend %input;
+    
     appearance: none;
     -moz-appearance: textfield;
   }
