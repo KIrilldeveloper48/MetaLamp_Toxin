@@ -1,8 +1,8 @@
 %input {
-  width: 100%;
-  padding: 9px 0 9px 15px;
   border: 1px solid $placeholder-color;
   border-radius: 4px;
+  padding: 9px 0 9px 15px;
+  width: 100%;
 
   &::placeholder {
     color: $placeholder-color;
@@ -11,8 +11,8 @@
 
   &:hover,
   &:focus {
-    border-color: $label-color;
     outline: none;
+    border-color: $label-color;
   }
 }
 
