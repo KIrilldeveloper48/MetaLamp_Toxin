@@ -1,3 +1,6 @@
+import comfortImage from '@/assets/img/icons/insert_emoticon.svg';
+import convenienceImage from '@/assets/img/icons/location_city.svg';
+
 const DROPDOWN_ROOM_FILTERS = [`Спальни`, `Кровати`, `Ванные комнаты`];
 const DROPDOWN_GUEST = [`Взрослые`, `Дети`, `Младенцы`];
 
@@ -67,3 +70,8 @@ export const CheckboxList = {
   "CHECKBOX_A11Y": CHECKBOX_A11Y,
   "CHECKBOX_RULES": CHECKBOX_RULES
 };
+
+export const FEATURES = [
+  {title: `Комфорт`, descr: `Шумопоглощающие стены`, image: comfortImage},
+  {title: `Удобство`, descr: `Окно в каждой из спален`, image: convenienceImage}
+];
