@@ -4,9 +4,9 @@
 
   &__wrapper {
     display: grid;
+    justify-content: space-between;
     grid-template-columns: max-content max-content;
     grid-template-rows: max-content 1fr;
-    justify-content: space-between;
     padding: 63px 120px;
   }
 }
@@ -15,9 +15,9 @@
   padding: 143px 141px;
 
   &__column-1 {
-    width: 320px;
     display: grid;
     grid-row-gap: 20px;
+    width: 320px;
   }
 
   &__group-1 {
@@ -26,22 +26,29 @@
   }
 
   &__group-2 {
-    margin-top: 20px;
     display: grid;
     grid-row-gap: 40px;
+    margin-top: 20px;
   }
 
   &__group-3 {
-    width: 266px;
-    margin-top: 60px;
     display: grid;
     grid-row-gap: 20px;
+    margin-top: 60px;
+    width: 266px;
+  }
+
+  &__group-4 {
+    display: grid;
+    grid-row-gap: 49px;
+    margin-top: 153px;
+    width: 266px;
   }
 
   &__date-dropdown {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     grid-column-gap: 20px;
+    grid-template-columns: 1fr 1fr;
   }
 
   &__filter-date {
