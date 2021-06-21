@@ -1,17 +1,19 @@
-@import '@styles/fonts.scss';
-@import '@styles/color-vars.scss';
+@import "@styles/fonts";
+@import "@styles/color-vars";
+@import "@styles/buttons";
 
 body {
-  font-family: 'Montserrat', serif;
+  font-family: "Montserrat", serif;
 }
+
 * {
   box-sizing: border-box;
 }
 
 .vs-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
+  margin: -1px;
   width: 1px;
   height: 1px;
-  margin: -1px;
+  clip: rect(0 0 0 0);
 }
